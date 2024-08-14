@@ -6,16 +6,16 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
-bot_name = "Bɪɪsᴀʟ Fɪʟᴇ2Lɪɴᴋ Bᴏᴛ"
+bot_name = "File_tolink_stream_bot"
 bisal_channel = "https://t.me/Ra_yan_2024_movie"
-bisal_grp = "https://t.me/+PA8OPL2Zglk3MDM1"
+bisal_grp = "https://t.me/+swpuQspBoVxiNjdl"
 
 class Var(object):
     MULTI_CLIENT = False
     API_ID = int(getenv('API_ID', ''))
     API_HASH = str(getenv('API_HASH', ''))
     BOT_TOKEN = str(getenv('BOT_TOKEN' , ''))
-    name = str(getenv('name', )
+    name = str(getenv('name','File_tolink_stream_bot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
     BIN_CHANNEL = int(getenv('BIN_CHANNEL', ''))

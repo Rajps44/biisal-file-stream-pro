@@ -14,7 +14,7 @@ class Var(object):
     MULTI_CLIENT = False
     API_ID = int(getenv('API_ID', '27002519'))
     API_HASH = str(getenv('API_HASH', '1033ee721101d78366b4ac46aadf3930'))
-    BOT_TOKEN = str(getenv('BOT_TOKEN' , '7478730845:AAHt8BoLO0cphbJ6bBkdPxm20Q1PbxBFtq8'))
+    BOT_TOKEN = str(getenv('BOT_TOKEN' , '7478730845:AAGTeTsmm7ToeQc7lW3jimEPiAlddFySsNo'))
     name = str(getenv('name','Netflixmovielakh_bot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))

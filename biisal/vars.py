@@ -30,6 +30,13 @@ class Var(object):
     if 'DYNO' in environ:
         ON_HEROKU = True
         APP_NAME = str(getenv('APP_NAME')) #dont need to fill anything here
+        API = environ.get("API", "fa2a0768fc8d2a51b22e46293634a52670a73c7a") # shortlink api
+        URL = environ.get("URL", "shortxlinks.com") # shortlink domain without https://
+        VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "") # how to open link
+        VERIFY = environ.get("VERIFY", "True")
+
+
+
     
     else:
         ON_HEROKU = False

@@ -6,9 +6,9 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
-bot_name = "File_tolink_stream_bot"
-bisal_channel = "https://t.me/Ra_yan_2024_movie"
-bisal_grp = "https://t.me/+swpuQspBoVxiNjdl"
+bot_name = "Netflixmovielakh_bot"
+bisal_channel = "https://t.me/netfilixmo_ch"
+bisal_grp = "https://t.me/n_flixmovie"
 
 class Var(object):
     MULTI_CLIENT = False

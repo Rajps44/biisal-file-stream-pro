@@ -13,8 +13,8 @@ from pyrogram.errors import UserNotParticipant
 from biisal.utils.file_properties import get_name, get_hash, get_media_file_size
 db = Database(Var.DATABASE_URL, Var.name)
 from pyrogram.types import ReplyKeyboardMarkup
-from biisal.vars import bot_name , bisal_channel , bisal_grp
-from utils import verify_user, check_token
+from biisal.vars import bot_name , bisal_channel , bisal_grp ,VERIFY, VERIFY_TUTORIAL, BOT_USERNAME
+from utils import verify_user, check_token, check_verification, get_token
 
 
 SRT_TXT = """<b>ᴊᴀɪ sʜʀᴇᴇ ᴋʀsɴᴀ {}!,

@@ -1,10 +1,10 @@
-# (c) adarsh-goel (c) @biisal
 import os
 from os import getenv, environ
 from dotenv import load_dotenv
+import logging
 
-
-
+# Setup logging
+logging.basicConfig(level=logging.INFO)
 
 load_dotenv()
 bot_name = "Netflixmovielakh_bot"
@@ -28,27 +28,30 @@ class Var(object):
     NO_PORT = bool(getenv('NO_PORT', False))
     APP_NAME = None
     OWNER_USERNAME = str(getenv('OWNER_USERNAME', 'Rajps33'))
+    
     if 'DYNO' in environ:
         ON_HEROKU = True
-        APP_NAME = str(getenv('APP_NAME')) #dont need to fill anything here
-        API = environ.get("API", "fa2a0768fc8d2a51b22e46293634a52670a73c7a") # shortlink api
-        URL = environ.get("URL", "shortxlinks.com") # shortlink domain without https://
-        VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "") # how to open link
+        APP_NAME = str(getenv('APP_NAME'))  # don't need to fill anything here
+        API = environ.get("API", "fa2a0768fc8d2a51b22e46293634a52670a73c7a")  # shortlink API
+        URL = environ.get("URL", "shortxlinks.com")  # shortlink domain without https://
+        VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "")  # how to open link
         VERIFY = environ.get("VERIFY", "True")
-
-
-
-    
     else:
         ON_HEROKU = False
+    
     FQDN = str(getenv('FQDN', 'BIND_ADRESS:PORT')) if not ON_HEROKU or getenv('FQDN', '') else APP_NAME+'.herokuapp.com'
-    HAS_SSL=bool(getenv('HAS_SSL',True))
+    HAS_SSL = bool(getenv('HAS_SSL', True))
+    
     if HAS_SSL:
         URL = "https://{}/".format(FQDN)
     else:
         URL = "http://{}/".format(FQDN)
+    
     DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://t54s2lqiv6:2mOV4n1iL21cMcMH@cluster0.ma3sm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'))
-    UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'netfilixmo_ch')) 
-    BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1002244711970")).split()))   
-    BAN_CHNL = list(set(int(x) for x in str(getenv("BAN_CHNL", "")).split()))   
+    UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'netfilixmo_ch'))
+    BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1002244711970")).split()))
+    BAN_CHNL = list(set(int(x) for x in str(getenv("BAN_CHNL", "")).split()))
     BAN_ALERT = str(getenv('BAN_ALERT' , '<b>ʏᴏᴜʀ ᴀʀᴇ ʙᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ.Pʟᴇᴀsᴇ ᴄᴏɴᴛᴀᴄᴛ @biisal_bot ᴛᴏ ʀᴇsᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇ!!</b>'))
+
+# लॉगिंग जोड़ें
+logging.info(f"VERIFY value: {VERIFY}")

@@ -31,10 +31,10 @@ class Var(object):
     APP_NAME = None
     OWNER_USERNAME = str(os.getenv('OWNER_USERNAME', 'Rajps33'))
     APP_NAME = str(os.getenv('APP_NAME', ''))  # The app name on Heroku, if any
-        API = os.getenv("API", "fa2a0768fc8d2a51b22e46293634a52670a73c7a")  # Shortlink API
-        URL = os.getenv("URL", "shortxlinks.com")  # Shortlink domain without https://
-        VERIFY_TUTORIAL = os.getenv("VERIFY_TUTORIAL", "")  # How to open the verification link
-        VERIFY = os.getenv("VERIFY", "True")  # Verification setting
+    API = os.getenv("API", "fa2a0768fc8d2a51b22e46293634a52670a73c7a")  # Shortlink API
+    URL = os.getenv("URL", "shortxlinks.com")  # Shortlink domain without https://
+    VERIFY_TUTORIAL = os.getenv("VERIFY_TUTORIAL", "")  # How to open the verification link
+    VERIFY = os.getenv("VERIFY", "True")  # Verification setting
 
     if 'DYNO' in os.environ:
         ON_HEROKU = True
